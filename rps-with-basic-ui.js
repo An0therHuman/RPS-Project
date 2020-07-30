@@ -26,10 +26,9 @@ const newLine = document.createElement('br');
 const newLine2 = document.createElement('br');
 const div1 = document.createElement('div');
 div1.textContent = 'Results will be shown here';
+// This allows for \n to show up in the html
 div1.setAttribute('style', 'white-space: pre-wrap;')
 
-
-const newLine3 = document.createElement('br');
 
 content.appendChild(info);
 content.appendChild(infoPT2);
@@ -101,6 +100,9 @@ let playRound = (playerSelection, computerSelection) =>{
 
 const buttons = document.querySelectorAll('button');
 
+// Adds an event listener to each button
+// Each time the button is pressed and a round is player the round number and who won is tracked
+// After 5 rounds a winner will be declared and all the counters will be reset
 buttons.forEach((button) => {
     i = 1;
     let computerWins = 0;
@@ -119,9 +121,7 @@ buttons.forEach((button) => {
             div1.textContent +=('\nNobody gets a point.')
         }
         div1.textContent +=(`\nThe computer has ${computerWins} wins and you have ${humanWins} wins.`)
-        console.log(i);
         if (i == 5){
-            console.log('5 rounds played');
             if (computerWins > humanWins){
                 div1.textContent +=('\nThe final winner is the computer!');
             }else if (computerWins == humanWins){
