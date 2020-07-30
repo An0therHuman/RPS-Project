@@ -123,11 +123,11 @@ buttons.forEach((button) => {
         div1.textContent +=(`\nThe computer has ${computerWins} wins and you have ${humanWins} wins.`)
         if (i == 5){
             if (computerWins > humanWins){
-                div1.textContent +=('\nThe final winner is the computer!');
+                div1.textContent +=('\n5 Rounds have been played. The final winner is the computer!');
             }else if (computerWins == humanWins){
-                div1.textContent +=('\nThere is no final winner, it\'s a draw.');
+                div1.textContent +=('\n5 Rounds have been played. There is no final winner, it\'s a draw.');
             }else{
-                div1.textContent +=('\nYou are the final winner!!!');
+                div1.textContent +=('\n5 Rounds have been played. You are the final winner!!!');
             }
             computerWins = 0;
             humanWins = 0;
